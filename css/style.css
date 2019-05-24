@@ -3,12 +3,21 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
   color: #6c7272;
+  -webkit-font-smoothing: antialiased;
 }
  
 *,
 *:before,
 *:after {
   box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0 0 10px;
 }
 
 /* container */
@@ -65,8 +74,61 @@ body {
 
 /* intro */
 .intro {
-  height: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 700px;
   padding-top: 100px;
   background: #31344e url('/img/intro-bg.jpg') center no-repeat;
   background-size: cover;
+}
+
+.intro__inner {
+  width: 100%;
+  max-width: 970px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro__tittle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 60px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+.intro__subtittle {
+  font-size: 22px;
+  color: #fff;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+
+/* button */
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 40px;
+  border-radius: 5px;
+  font-family: inherit;
+  border: 0;
+  cursor: pointer;
+  transition: background .2s linear;
+}
+
+.btn--red {
+  background-color: red;
+}
+
+.btn--red:hover {
+  background-color: rgb(199, 18, 18);
 }
