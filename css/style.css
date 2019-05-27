@@ -23,8 +23,9 @@ p {
 /* container */
 .container {
   width: 100%;
-  max-width: 1170px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 
@@ -226,4 +227,80 @@ p {
   font-size: 14px;
   color: #fff;
   font-weight: 700;
+}
+
+/* team */
+.team {
+  margin: 100px 0 70px;
+}
+
+.team__inner {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.team__item {
+  width: 25%;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+.team__photo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.team__name {
+  font-size: 22px;
+  color: #2d3033;
+  margin-bottom: 8px;
+}
+
+.team__prof {
+  font-size: 13px;
+  color: #e84545;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.team__text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6c7279;
+  margin-bottom: 20px;
+}
+
+/* social */
+.social {
+  display: flex;
+}
+
+.social__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #e8ccce;
+  margin-right: 4px;
+  transition: all .2s linear;
+}
+
+.social__item:hover {
+  background-color: #ee88cc;
+}
+
+.social__item:hover .social__icon {
+  fill: #fff;
+}
+
+.social__icon {
+  display: block;
+  height: 18px;
+  fill: #c6cacc;
+  transition: all .2s linear;
 }
