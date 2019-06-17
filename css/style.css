@@ -349,9 +349,19 @@ p {
   background-color: #53354a;
 }
 
+.reviews__slider {
+  height: 500px;
+  overflow: hidden;
+}
+
+.reviews__slider.slick-initialized {
+  height: auto;
+}
+
 .reviews__item {
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .reviews__photo {
@@ -390,6 +400,44 @@ p {
   text-transform: uppercase;
   color: #fff;
   margin-top: 20px;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 0;
+  padding: 0 0 10px;
+  list-style: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.slick-dots li {
+  margin: 0 5px;
+}
+
+.slick-dots button {
+  background: #fff;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  font-size: 0;
+  border: 0;
+  opacity: 0.5;
+  color: transparent;
+  cursor: pointer;
+}
+
+.slick-dots button:focus {
+  outline: 0;
+}
+
+.slick-dots .slick-active button {
+  opacity: 1;
 }
 
 /* download */
@@ -517,6 +565,21 @@ p {
   /* nav */
   .nav {
     display: none;
+    flex-direction: column;
+    background-color: #31344e;
+    width: 100%;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 100%;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .nav__link {
+    padding: 10px 15px;
   }
 
   .burger {

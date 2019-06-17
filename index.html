@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Cardo:400,400i|Open+Sans:400,700|Raleway:300,400,600,700&display=swap&subset=cyrillic-ext" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="/css/style.css">
     <title>WebSite2</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -58,15 +59,15 @@
             <div class="header__logo">
                  <img src="/img/activebox-logo.png" alt="">
             </div>
-            <nav class="nav">
-                <a href="#" class="nav__link">Features</a>
-                <a href="#" class="nav__link">Works</a>
-                <a href="#" class="nav__link">Our Team</a>
-                <a href="#" class="nav__link">Testimonials</a>
-                <a href="#" class="nav__link">Download</a>
+            <nav class="nav" id="nav">
+                <a href="#" class="nav__link" data-scroll="#features">Features</a>
+                <a href="#" class="nav__link" data-scroll="#works">Works</a>
+                <a href="#" class="nav__link" data-scroll="#team">Our Team</a>
+                <a href="#" class="nav__link" data-scroll="#reviews">Testimonials</a>
+                <a href="#" class="nav__link" data-scroll="#download">Download</a>
             </nav>
 
-            <button class="burger" type="button">
+            <button class="burger" type="button" id="navToggle">
                 <span class="burger__item">Menu</span>
             </button>
         </div>
@@ -85,7 +86,7 @@
 </div>
 
 <!-- features -->
-<div class="container">
+<div class="container" id="features">
     <div class="features">
         <div class="features__item">
             <img class="features__icon" src="/img/features/feature-1.png" alt="">
@@ -121,7 +122,7 @@
 </div>
 
 <!-- works -->
-<div class="works">
+<div class="works" id="works">
     <div class="works__item">
         <img class="works__photo" src="/img/works/work-1.jpg" alt="">
         <div class="works__content">
@@ -182,7 +183,7 @@
 
 <!-- team -->
 <div class="container">
-    <div class="team">
+    <div class="team" id="team">
         <div class="team__inner">
 
             <div class="team__item">
@@ -286,28 +287,45 @@
 </div>
 
 <!-- Testimonials -->
-<div class="reviews">
+<div class="reviews" id="reviews">
     <div class="container">
-
-        <div class="reviews__item">
-            <div class="reviews__photo">
-                <img class="reviews__img" src="/img/reviews/review-1.jpg" alt="">
-            </div>
-            <div class="reviews__content">
-                <div class="reviews__text">
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia qui non asperiores tempora voluptates eligendi?"
+        <div class="reviews__slider" id="reviewsSlider">
+            <div>
+                <div class="reviews__item">
+                    <div class="reviews__photo">
+                        <img class="reviews__img" src="/img/reviews/review-1.jpg" alt="">
+                    </div>
+                    <div class="reviews__content">
+                        <div class="reviews__text">
+                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia qui non asperiores tempora voluptates eligendi?"
+                        </div>
+                        <div class="reviews__author">
+                            John Doe, Web Developer
+                        </div>
+                    </div>
                 </div>
-                <div class="reviews__author">
-                    John Doe, Web Developer
+            </div>
+            <div>
+                <div class="reviews__item">
+                    <div class="reviews__photo">
+                        <img class="reviews__img" src="/img/reviews/review-1.jpg" alt="">
+                    </div>
+                    <div class="reviews__content">
+                        <div class="reviews__text">
+                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia qui non asperiores tempora voluptates eligendi? lorem1"
+                        </div>
+                        <div class="reviews__author">
+                            John Doe, Web Developer
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 
 <!-- download -->
-<div class="download">
+<div class="download" id="download">
     <div class="container">
         <h3 class="download__title">Are You Ready to Start? Download Now For Free</h3>
         <div class="download__text"><p>Lorem ipsum dolor sit amet consectetur.</p></div>
@@ -372,7 +390,7 @@
     </div>
 </footer>
 
-
-    <script src="/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="/js/main.js"></script>
 </body>
 </html>
